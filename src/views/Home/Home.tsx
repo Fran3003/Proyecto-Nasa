@@ -5,6 +5,7 @@ import fetchApi from '../../utils/fetch'
 import TodaysImage from "../../componets/TodaysImage";
 import { PostImage } from "../../types";
 import { format, sub } from "date-fns";
+import LastFiveDaysImages from "../../componets/LastFiveDaysImages";
 
 const Home = () => {
     const [todaysImage, setTodaysImage] = useState<PostImage>({});
@@ -40,13 +41,12 @@ const Home = () => {
         loadLast5DaysImages().catch(null);
     }, []);
 
-    console.log(lastFiveDaysImages);
     
-
     return (
     <View style={styles.container}>
         <Header />
         <TodaysImage {...todaysImage}/>
+        <LastFiveDaysImages postImages={lastFiveDaysImages}/>
     </View>
     );
 };

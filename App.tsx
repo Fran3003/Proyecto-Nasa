@@ -10,13 +10,13 @@ import {
   SafeAreaView,
   StyleSheet,
 } from 'react-native';
-import Home from './src/views/Home';
+import Routes from './src/routes';
 
 
 function App(): JSX.Element {
   return (
     <SafeAreaView style={styles.container}>
-      <Home />
+      <Routes />
     </SafeAreaView>
   );
 }
